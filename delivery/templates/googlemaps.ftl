@@ -73,8 +73,19 @@
     <#break>
 </#switch>
 
-<#-- TODO: Handle page builder events to make sure the component is always editable -->
-<@crafter.componentRootTag>
+<#if modePreview>
+  <style>
+    .craftercms-ice-on .craftercms-googlemaps-plugin-container::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: ${contentModel.width_s}px;
+      height: ${contentModel.height_s}px;
+    }
+  </style>
+</#if>
+
+<@crafter.componentRootTag class="craftercms-googlemaps-plugin-container">
   <@crafter.iframe
     allowfullscreen="true"
     width="${contentModel.width_s}"
