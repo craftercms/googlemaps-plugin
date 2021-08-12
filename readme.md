@@ -9,7 +9,7 @@ The plugin can be installed to your site from the Crafter CMS Marketplace
 # Setup
 
 After the plugin has been installed you need to setup your Google Maps API Key by adding the following snippet in
-your site configuration:
+your `Engine Site Configuration` file:
 
 ```xml
 <plugins>
