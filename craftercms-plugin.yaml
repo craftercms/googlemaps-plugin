@@ -35,9 +35,9 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 2
+    patch: 3
   description: A plugin to add Google Maps to a site
-  documentation: "https://raw.githubusercontent.com/craftercms/googlemaps-plugin/master/readme.md" 
+  documentation: "https://raw.githubusercontent.com/craftercms/googlemaps-plugin/master/readme.md"
   website:
     name: Google Maps Plugin
     url: https://github.com/craftercms/googlemaps-plugin
@@ -46,15 +46,9 @@ plugin:
       - title: Google Maps
         description: Google Maps
         url: https://raw.githubusercontent.com/craftercms/googlemaps-plugin/master/.crafter/cover.png
-      - title: Place
-        description: Google Maps in place mode
+      - title: Google Maps Example
+        description: Google Maps Example
         url: https://raw.githubusercontent.com/craftercms/googlemaps-plugin/master/.crafter/screenshots/place.png
-      - title: Directions
-        description: Google Maps in directions mode
-        url: https://raw.githubusercontent.com/craftercms/googlemaps-plugin/master/.crafter/screenshots/directions.png
-      - title: Street View
-        description: Google Maps in Street View mode
-        url: https://raw.githubusercontent.com/craftercms/googlemaps-plugin/master/.crafter/screenshots/streetview.png
   developer:
     company:
       name: Crafter Software
