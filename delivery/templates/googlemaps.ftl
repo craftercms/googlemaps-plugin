@@ -33,8 +33,8 @@
       content: '';
       position: absolute;
       display: inline-block;
-      width: ${contentModel.width_s}px;
-      height: ${contentModel.height_s}px;
+      width: ${contentModel.width_s};
+      height: ${contentModel.height_s};
     }
   </style>
 </#if>
