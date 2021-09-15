@@ -42,7 +42,7 @@
 <@crafter.componentRootTag>
   <#if apiKey?has_content>
     <div class="craftercms-googlemaps-plugin-container">
-      <@crafter.iframe
+      <iframe
         allowfullscreen="true"
         width="${contentModel.width_s}"
         height="${contentModel.height_s}"
