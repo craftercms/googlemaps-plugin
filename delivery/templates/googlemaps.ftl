@@ -33,21 +33,23 @@
       content: '';
       position: absolute;
       display: inline-block;
-      width: ${contentModel.width_s}px;
-      height: ${contentModel.height_s}px;
+      width: ${contentModel.width_s};
+      height: ${contentModel.height_s};
     }
   </style>
 </#if>
 
-<@crafter.componentRootTag class="craftercms-googlemaps-plugin-container">
+<@crafter.componentRootTag>
   <#if apiKey?has_content>
-    <@crafter.iframe
-      allowfullscreen="true"
-      width="${contentModel.width_s}"
-      height="${contentModel.height_s}"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=${apiKey}&${params?join('&')}"
-    />
+    <div class="craftercms-googlemaps-plugin-container">
+      <iframe
+        allowfullscreen="true"
+        width="${contentModel.width_s}"
+        height="${contentModel.height_s}"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=${apiKey}&${params?join('&')}"
+      />
+    </div>
   <#else>
     The Google Maps plugin requires an API key, please follow the
     <a target="_blank" href="https://github.com/craftercms/googlemaps-plugin#setup">instructions</a> to configure it.
