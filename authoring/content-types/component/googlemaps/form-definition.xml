@@ -183,7 +183,7 @@
 					<iceId></iceId>
 					<title>Height</title>
 					<description></description>
-					<defaultValue>480px</defaultValue>
+					<defaultValue>320px</defaultValue>
 					<help></help>
 					<properties>
 						<property>
