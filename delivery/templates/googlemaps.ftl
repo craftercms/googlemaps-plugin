@@ -29,6 +29,10 @@
 
 <#if modePreview>
   <style>
+    .craftercms-ice-on .craftercms-googlemaps-plugin-container {
+      position: relative;
+    }
+
     .craftercms-ice-on .craftercms-googlemaps-plugin-container::before {
       content: '';
       position: absolute;
@@ -36,10 +40,26 @@
       width: ${contentModel.width_s};
       height: ${contentModel.height_s};
     }
+
+    .craftercms-ice-on .craftercms-googlemaps-plugin-container.z-pressed::before {
+      background-color: rgba(50, 50, 50, 0.8);
+    }
+
+    .craftercms-ice-on .craftercms-googlemaps-plugin-container.z-pressed::after {
+      content: 'Switch off Edit mode to interact with map.';
+      position: absolute;
+      display: inline-block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
   </style>
 </#if>
 
-<@crafter.componentRootTag>
+<@crafter.div>
   <#if apiKey?has_content>
     <div class="craftercms-googlemaps-plugin-container">
       <iframe
@@ -54,4 +74,22 @@
     The Google Maps plugin requires an API key, please follow the
     <a target="_blank" href="https://github.com/craftercms/googlemaps-plugin#setup">instructions</a> to configure it.
   </#if>
-</@crafter.componentRootTag>
+</@crafter.div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const onKeyup = (e) => {
+      if (e.key === 'z') {
+        document.querySelector('.craftercms-googlemaps-plugin-container').classList.remove('z-pressed');
+      }
+    };
+    const onKeydown = (e) => {
+      if (e.key === 'z') {
+        document.querySelector('.craftercms-googlemaps-plugin-container').classList.add('z-pressed');
+      }
+    };
+
+    document.addEventListener('keydown', onKeydown, false);
+    document.addEventListener('keyup', onKeyup, false)
+  });
+</script>
