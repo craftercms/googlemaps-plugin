@@ -1,6 +1,6 @@
 <#import "/templates/system/common/crafter.ftl" as crafter />
 
-<#assign apiKey = siteConfig.getString("plugins.googleMaps.apiKey", "")/>
+<#assign apiKey = pluginConfig.getString("apiKey", "")/>
 <#assign params = []/>
 
 <#if contentModel.center_s?has_content>
