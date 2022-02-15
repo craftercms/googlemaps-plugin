@@ -1,27 +1,22 @@
-# Google Maps Plugin for Crafter CMS
+# Google Maps Plugin for CrafterCMS
 
 This is a highly configurable plugin to add Google Maps to your site.
 
 # Installation
 
-The plugin can be installed to your site from the Crafter CMS Marketplace
+The plugin can be installed to your site from the CrafterCMS Marketplace
 
 # Setup
 
-After the plugin has been installed you need to setup your Google Maps API Key by adding the following snippet in
-your `Engine Site Configuration` file:
+The following parameters can be provided during the plugin installation:
 
-```xml
-<plugins>
-  <googleMaps>
-    <apiKey>...</apiKey>
-  </googleMaps>
-</plugins>
-```
+- `apiKey`: The Google API Key
+
+After installation the configuration can be updated from the Plugin Management section in Crafter Studio
 
 # Usage
 
-Once the API Key is properly configured you can create any number of Google Maps components as needed. Each instance
+Once the plugin has been installed you can create any number of Google Maps components as needed. Each instance
 of the component can be configured with any of the properties supported by Google Maps, for more information about
 the options see the
 [official docs](https://developers.google.com/maps/documentation/embed/embedding-map#choosing_map_modes).
