@@ -35,7 +35,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 12
+    patch: 13
   description: A plugin to add Google Maps to a site
   documentation: "https://raw.githubusercontent.com/craftercms/googlemaps-plugin/master/readme.md"
   website:
@@ -67,6 +67,9 @@ plugin:
     - major: 4
       minor: 0
       patch: 2
+    - major: 4
+      minor: 0
+      patch: 3
   crafterCmsEditions:
     - community
     - enterprise
